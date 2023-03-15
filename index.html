@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--CDN GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  
+  <body>
+    <header class="header">
+      <div class="container nav_container">
+        <div class="logo">
+          <figure><img src="./assets/ecommerce-website-icon.png" class="logo__img"alt="Logo"></figure>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Products</a></li>
+            <li id="cart-btn">Cart</li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+    
+    <section class="title">
+      <h1 id="title">ALL PRODUCTS</h1>
+    </section>
+
+    <div id="overlay" class="hide"></div>
+
+    <section class="cart hide">
+
+      <div class="flex-container">
+        <div class="top">
+
+          <div class="info">
+            <h3>You added to cart</h3>
+            <button id="close">
+              <img src="./assets/close.svg" alt="Close">
+            </button>
+          </div>
+
+          <ul id="list">
+            <p id="none">You didn't add anything yet. :( </p>
+          </ul>
+        </div>
+        <div class="bottom">
+          <p id="total"></p>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+
+    </section>
+
+    <main class="main">
+      <div class="products_container" id="products_container">
+        
+      </div>
+    </main>
+
+    <aside class="left_menu">
+      <div class="container">
+        <ul class="left_menu__list">
+          
+          <!--CATEGORÍAS REPRESENTATIVAS-->
+          <li class="category">ALL PRODUCTS</li>
+          <li class="category">IDK</li>
+          <li class="category">LOL</li>
+        </ul>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <p>&copy;2023</p>
+      <p>ALL RIGHTS RESERVED</p>
+      <p>IAN BARUTTA</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
+
+
