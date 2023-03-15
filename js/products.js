@@ -78,8 +78,8 @@ async function validateDolar() {
             )
         );
     }
-
 }
+
 
 
 async function showProducts(){

@@ -5,7 +5,6 @@ import { addProducts, deleteFromCart, showProducts, decrementQty, incrementQty, 
 document.addEventListener('DOMContentLoaded', (e) => {
     showCart()
     closeCart()
-    validateDolar()
     showProducts()
     addProducts()
     deleteFromCart()
