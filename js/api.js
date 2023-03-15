@@ -1,5 +1,4 @@
-let dolar = [],
-    dolarBlue;
+let dolar = [];
 
 async function getData() {
     try{
@@ -17,12 +16,6 @@ async function getData() {
     }
 }
 
-getData()
-    .then((el) => {
-        dolarBlue = el;
-    })
-    .catch((err) => {
-        if(err) dolarBlue = err
-    })
 
-export {dolarBlue}
+export {getData}
+

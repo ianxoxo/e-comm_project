@@ -1,4 +1,7 @@
-import { dolarBlue } from "./api.js";
+import { getData } from "./api.js";
+
+let dolarBlue;
+
 
 class Product {
     constructor(title, price, img) {
@@ -20,7 +23,8 @@ const d = document,
 
 const PRODUCT_LIST = [];
 
-setTimeout(() => {
+async function validateDolar() {
+    dolarBlue = await getData();
     if (dolarBlue === 1) {
         PRODUCT_LIST.push(
             new Product(
@@ -74,10 +78,12 @@ setTimeout(() => {
             )
         );
     }
-}, 1000);
 
-const showProducts = () => {
-    setTimeout(() => {
+}
+
+
+async function showProducts(){
+        await validateDolar();
         PRODUCT_LIST.forEach((product) => {
             if (typeof product.price === "string") {
                 const $div = d.createElement("div");
@@ -104,7 +110,6 @@ const showProducts = () => {
             }
         });
         $products.appendChild($fragmentMain);
-    }, 1000);
 };
 
 const CURRENT_CART = JSON.parse(localStorage.getItem("cart")) || [];
@@ -271,4 +276,5 @@ export {
     deleteFromCart,
     decrementQty,
     incrementQty,
+    validateDolar,
 };
